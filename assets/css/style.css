@@ -1,0 +1,200 @@
+header{
+    background-color:gray;  
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+header > div{
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.header_right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header_right > li > a {
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+.section1{
+    display: flex;
+    flex-direction: row;
+}
+
+.section1_left{
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+h1{
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.section1_left img{
+    width: 30vw;
+    border-radius: 50%;
+}
+
+.section1_right{
+    margin: 10vw 0 0 3vw;
+}
+
+.section1_right h2{
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+}
+
+.section1_right > ul {
+    margin: 2vh 0 7vh 0;
+    font-size: 20px;
+    background: #fffcf4;
+    border: dotted #1e366a 1px;
+}
+
+.section1_right > ul > li{
+    margin: 2vh 3vw 2vh 4vw;
+    list-style-type:square;
+}
+
+.section2 > h2{
+    padding-top: 10vh;
+    margin: 10vh 0 3vh 3vw;
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+}
+.hobbycards1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.hobbycards1 > div{
+    border: solid 0.1px grey;
+    width: 30vw;
+    height: 22.5vw;
+}
+
+#img1{
+    background-image:url(../img/256959_s.jpg);
+    background-size: contain;
+}
+
+#img2{
+    background-image:url(../img/3802300_s.jpg);
+    background-size: contain;
+}
+
+#img3{
+    background-image:url(../img/980056_s.jpg);
+    background-size: contain;
+}
+
+.hobbycards1 > div> h3{
+    margin-top: 0.5vh;
+    color: ivory;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+.hobbycards2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3vh;
+}
+
+.hobbycards2 > div{
+    border: solid 0.1px grey;
+    width: 30vw;
+    height: 22.5vw;
+}
+
+#img4{
+    background-image:url(../img/4776547_s.jpg);
+    background-size: contain;
+}
+
+#img5{
+    background-image:url(../img/4006238_s.jpg);
+    background-size: contain;
+}
+
+#img6{
+    background-image:url(../img/2275429_s.jpg);
+    background-size: contain;
+}
+
+.hobbycards2 > div> h3{
+    margin-top: 0.5vh;
+    color: ivory;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+.contactbox{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact h2{
+    font-family: 'Pacifico', cursive;
+    margin: 15vh 0 3vh 3vw;
+    font-size: 30px;
+}
+
+.contact_left , .contact_right{
+    width: 35vw;
+}
+
+.contact_left , .contact_right >h3 {
+    font-size: 20px;
+}
+
+.contact_right iframe{
+    width: 35vw;
+    height: 28vw;
+}
+
+.contact_left > form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.contact_left > form >input{
+    width: 30vw;
+    height: 3vw;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.contact_left > form > textarea{
+    width: 30vw;
+    height: 18vw;
+    margin-bottom: 1vw;
+}
+
+footer{
+    margin-top: 20px;
+    background-color:gray;
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
