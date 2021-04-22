@@ -13,13 +13,13 @@ header > div{
     align-items: center;
     margin-left: 10px;
 }
-.header_right{
+.nav{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.header_right > li > a {
+.nav > li{
     margin-right: 50px;
     font-size: 20px;
     font-weight: bolder;
@@ -51,7 +51,7 @@ h1{
 }
 
 .section1_right{
-    margin: 10vw 0 0 3vw;
+    margin: 10vw 5vw 0 3vw;
 }
 
 .section1_right h2{
@@ -80,12 +80,13 @@ h1{
 .hobbycards1{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .hobbycards1 > div{
     border: solid 0.1px grey;
     width: 30vw;
-    height: 22.5vw;
+    height: 22.5vw; 
 }
 
 #img1{
@@ -111,18 +112,6 @@ h1{
     font-family: 'Pacifico', cursive;
 }
 
-.hobbycards2{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3vh;
-}
-
-.hobbycards2 > div{
-    border: solid 0.1px grey;
-    width: 30vw;
-    height: 22.5vw;
-}
-
 #img4{
     background-image:url(../img/4776547_s.jpg);
     background-size: contain;
@@ -138,13 +127,6 @@ h1{
     background-size: contain;
 }
 
-.hobbycards2 > div> h3{
-    margin-top: 0.5vh;
-    color: ivory;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Pacifico', cursive;
-}
 
 .contactbox{
     display: flex;
@@ -197,4 +179,150 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#menu{
+    display: none;
+}
+
+@media screen and (max-width:599px){
+    .section1_left > h1{
+        font-size: 25px;
+    }
+
+    .section1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section1_left{
+        margin-top: 10vh;
+    }
+
+    #hobby{
+        margin-left: 4vw;
+    }
+
+
+    .nav{
+        display: none; 
+    }
+
+    .hamburger-label{
+        display: block;
+        position: relative;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        content: '';
+        cursor: pointer;
+    }
+
+    .hamburger, .hamburger::before, .hamburger::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: 2px;
+        width: 35px;
+        background-color: white;
+        display: block;
+        content: '';
+        transition: all 1s;
+    }
+
+    .hamburger::before{
+        top: -25px;
+    }
+
+    .hamburger::after{
+        top: 25px;
+    }
+
+    #menu:checked ~ .hamburger-label > .hamburger::before{
+        top: 0;
+        transform: rotate(45deg) ;
+    }
+
+    #menu:checked ~ .hamburger-label > .hamburger::after{
+        top: 0;
+        transform: rotate(-45deg) ;
+    }
+
+    #menu:checked ~ .hamburger-label > .hamburger {
+        background-color: transparent;
+    }
+    #menu:checked ~ .nav{
+        display: flex;
+    }
+
+    #menu:checked ~ .nav > li > a{
+        animation: show 1s linear 0s;
+    }
+
+    #menu:not(:checked) ~ .nav{
+        animation: show 1s linear 0s 1 reverse forwards;
+
+    }
+
+    .header_right{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hobbycards1 > div{
+        width: 60vw;
+        height: 45vw;
+    }
+
+    .contactbox{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .contact_left , .contact_right{
+        width: 70vw;
+    }
+
+    .contact_right iframe{
+        width: 70vw;
+        height: 50vw;
+    }
+    
+    .contact_left > form{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    
+    .contact_left > form >input{
+        width: 70vw;
+        height: 5vw;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    
+    .contact_left > form > textarea{
+        width: 70vw;
+        height: 40vw;
+        margin-bottom: 1vw;
+    }
+
+    @keyframes show {
+        from{
+            display: none;
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    
 }
